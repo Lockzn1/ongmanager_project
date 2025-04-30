@@ -1,0 +1,163 @@
+/* Fonte global */
+* {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, "Ubuntu", Cantarell, sans-serif;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+  background: #f4f4f4;
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #3f62a6;
+  border-radius: 8px;
+}
+
+/* Tela de Login */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: #f4f4f4;
+  color: #000;
+}
+
+/* Modo escuro aplicado à tag HTML */
+html.dark body {
+  background-color: #111827; /* Tailwind gray-900 */
+  color: #fff;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.login-card {
+  background-color: #fff;
+  padding: 40px 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html.dark .login-card {
+  background-color: #1f2937; /* Tailwind gray-800 */
+  color: #fff;
+}
+
+.login-card h1 {
+  color: black;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+html.dark .login-card h1 {
+  color: #fff;
+}
+
+.login-card p {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+html.dark .login-card p {
+  color: #ccc;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  color: #333;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+html.dark .form-group label {
+  color: #ddd;
+}
+
+.form-group input {
+  width: 92%;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  background-color: #fff;
+  color: #000;
+  transition: border 0.3s ease, background-color 0.3s ease;
+}
+
+html.dark .form-group input {
+  background-color: #374151;
+  border: 1px solid #555;
+  color: #fff;
+}
+
+.form-group input:hover {
+  border-color: #3f62a6;
+}
+
+.form-group input:focus {
+  border-color: rgba(35, 183, 252, 0.8);
+}
+
+.btn-login {
+  width: 100%;
+  padding: 10px;
+  background-color: #3f62a6;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-login:hover {
+  background-color: #43589d;
+}
+
+/* Estilos para o botão de alternância de tema */
+#dark-toggle {
+  background-color: #3f62a6; /* Cor de fundo para combinar com o tema principal */
+  color: #fff; /* Cor do ícone (lua) */
+  border-radius: 50%; /* Botão redondo */
+  padding: 12px; /* Tamanho adequado para o botão */
+  font-size: 18px; /* Tamanho do ícone */
+  border: none; /* Sem borda */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  cursor: pointer; /* Indicando que é clicável */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transições suaves */
+}
+
+#dark-toggle:hover {
+  background-color: #43589d; /* Cor ligeiramente mais escura quando o mouse passar */
+  transform: scale(1.1); /* Efeito de aumento ao passar o mouse */
+}
+
+#dark-toggle:focus {
+  outline: none; /* Removendo o contorno de foco */
+}
+
+/* Posicionando o botão de alternância no canto superior direito */
+#dark-toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 50; /* Garantindo que o botão fique por cima de outros elementos */
+}
