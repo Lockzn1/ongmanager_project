@@ -5,15 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ONGManager</title>
     <link rel="stylesheet" href="../style/login.css" />
+    <!-- Font Awesome para ícones -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
   </head>
 
   <body class="bg-white text-black dark:bg-gray-900 dark:text-white transition-colors duration-300">
     <!-- Botão de alternância de tema -->
-    <div class="absolute top-4 right-4 z-50">
-      <button id="dark-toggle" class="p-2 bg-gray-300 dark:bg-gray-700 rounded text-sm">
-        🌙 Alternar Tema
-      </button>
-    </div>
+    <button id="dark-toggle" aria-label="Alternar tema">
+      <span id="toggle-icon">
+        <i class="fa-solid fa-sun"></i>
+        <i class="fa-solid fa-moon"></i>
+      </span>
+      <div id="toggle-circle"></div>
+    </button>
 
     <!-- Formulário de Login -->
     <div class="login-container">
